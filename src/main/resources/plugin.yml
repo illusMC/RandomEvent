@@ -1,0 +1,4 @@
+name: RandEvent
+version: @version@
+main: pw.illusion.randevent.Main
+api-version: 1.13
