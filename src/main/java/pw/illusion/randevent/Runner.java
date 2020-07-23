@@ -11,7 +11,7 @@ import java.util.concurrent.Callable;
 
 public class Runner extends BukkitRunnable {
     @Getter
-    private Map<String, Callable<Boolean>> events;
+    private Map<String, Callable<Boolean>> events=new HashMap<>();
     private final static Random random=new Random();
 
     @SneakyThrows
