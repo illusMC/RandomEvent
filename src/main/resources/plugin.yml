@@ -2,3 +2,8 @@ name: RandEvent
 version: @version@
 main: pw.illusion.randevent.Main
 api-version: 1.13
+commands:
+  event:
+    default: op
+    description: debug
+    usage: /event <name>
