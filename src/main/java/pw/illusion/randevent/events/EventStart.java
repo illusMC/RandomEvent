@@ -1,12 +1,10 @@
 package pw.illusion.randevent.events;
 
 import lombok.Getter;
-import org.bukkit.Bukkit;
 import org.bukkit.event.Cancellable;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 import pw.illusion.randevent.Main;
-import sun.misc.Unsafe;
 import sun.reflect.Reflection;
 
 public class EventStart extends Event implements Cancellable {
