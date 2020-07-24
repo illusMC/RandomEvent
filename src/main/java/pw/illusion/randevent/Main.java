@@ -22,10 +22,10 @@ public final class Main extends JavaPlugin {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if(args.length!=2){
+        if (args.length != 1) {
             return false;
         }
-        Bukkit.getPluginManager().callEvent(new EventStart(args[1]));
+        Bukkit.getPluginManager().callEvent(new EventStart(args[0]));
         return true;
     }
 }

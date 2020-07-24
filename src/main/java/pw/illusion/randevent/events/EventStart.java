@@ -4,8 +4,6 @@ import lombok.Getter;
 import org.bukkit.event.Cancellable;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
-import pw.illusion.randevent.Main;
-import sun.reflect.Reflection;
 
 public class EventStart extends Event implements Cancellable {
     @Getter
@@ -14,9 +12,6 @@ public class EventStart extends Event implements Cancellable {
     private final HandlerList handlers=new HandlerList();
     public EventStart(String name){
         super(true);
-        if(!Reflection.getCallerClass().getCanonicalName().equals("pw.illusion.randevent.Runner")){
-            Main.getPlugin(Main.class).getLogger().warning("EventStart called by a firer which isn't Runner!");
-        }
         eventName=name;
     }
     @Override
