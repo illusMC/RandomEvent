@@ -11,7 +11,6 @@ public class EventStart extends Event implements Cancellable {
     private boolean cancelled=false;
     private final HandlerList handlers=new HandlerList();
     public EventStart(String name){
-        super(true);
         eventName=name;
     }
     @Override
