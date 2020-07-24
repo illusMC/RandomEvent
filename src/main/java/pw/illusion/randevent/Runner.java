@@ -17,9 +17,15 @@ public class Runner extends BukkitRunnable {
     @SneakyThrows
     @Override
     public void run() {
-        List<String> names=new ArrayList<>(events.keySet());
-        String name=names.get(random.nextInt(names.size()));
-        if(events.get(name).call()){
+        List<String> names = new ArrayList<>(events.keySet());
+        if (names.size() == 0) return;
+        String name;
+        if (names.size() == 1) {
+            name = names.get(0);
+        } else {
+            name = names.get(random.nextInt(names.size()));
+        }
+        if (events.get(name).call()) {
             Bukkit.getPluginManager().callEvent(new EventStart(name));
         }
     }
